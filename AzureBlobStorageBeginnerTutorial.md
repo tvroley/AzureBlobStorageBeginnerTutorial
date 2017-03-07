@@ -67,7 +67,7 @@ CloudBlobClient myBlobClient = myStorageAccount.CreateCloudBlobClient();
 
 ### Access a container in your blob storage by name
 
-* It's okay if the string parameter of the GetContainersReference method is not the name of a container in your Azure storage account yet.
+* The string parameter of the GetContainersReference method is the name of a container in your Azure storage account, which either already exists, or the next step will create.
 
 ```C#
 // Access a container in your blob storage by name
@@ -82,7 +82,7 @@ myContainer.CreateIfNotExists();
 
 ### Access a blob in a container by name
 
-* It's okay for now if a blob with that name does not exist yet in the container created in the previous step.
+* The string parameter of the GetBlockBlobReference method is the name of a blob in your Azure storage account, which either already exists, or the next step will create.
 
 ```C#
 // Access a blob in a container by name
@@ -91,7 +91,7 @@ CloudBlockBlob myBlockBlob = container.GetBlockBlobReference("myblockblob");
 
 ### Upload a local blob to a cloud container
 
-* When practicing your first time, you can use a text file as a blob.  Create a text file, find its file path, and replace FilePath\FileName in the OpenRead method with the file path and name of your file.  Keep the quotation marks used in the OpenRead parameter. 
+* When practicing your first time, you can use a text file as a blob.  Create a text file, find its file path, and replace FilePath\FileName in the OpenRead method with the file path and name of your file.  Keep the quotation marks used in the OpenRead method parameter. 
 
 ```C#
 /*Create or replace a block blob called myblockblob in the container called mycontainer, consisting of the file you chose*/ 
