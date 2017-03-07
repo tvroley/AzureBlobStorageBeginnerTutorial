@@ -77,13 +77,13 @@ CloudBlobContainer myContainer = blobClient.GetContainerReference("mycontainer")
 
 #### Create the container if it does not exist
 
-*The Following code creates a container with the name given to the blob client if it does not exists yet.
+* The Following code creates a container with the name given to the blob client if it does not exists yet.
 
 ```C#
 myContainer.CreateIfNotExists();
 ```
 
-### Upload Data to a container
+### Upload data to a container
 
 #### Access a blob in a container by name
 
@@ -91,7 +91,7 @@ myContainer.CreateIfNotExists();
 
 ```C#
 // Access a blob in a container by name
-CloudBlockBlob myBlockBlob = container.GetBlockBlobReference("myblockblob");
+CloudBlockBlob myBlockBlob = myContainer.GetBlockBlobReference("myblockblob");
 ```
 
 #### Upload a local blob to a cloud container
@@ -103,5 +103,17 @@ CloudBlockBlob myBlockBlob = container.GetBlockBlobReference("myblockblob");
 using (var fileStream = System.IO.File.OpenRead(@"FilePath\FileName"))
 {
     myBlockBlob.UploadFromStream(fileStream);
+}
+```
+
+### View items in a container
+
+* The following code lists the block blobs in a container by their URI.
+
+```C#
+foreach (IListBlobItem item in myContainer.ListBlobs(null, false))
+{
+	CloudBlockBlob myBlob = (CloudBlockBlob)item;
+	Console.WriteLine(myBlob.Uri);
 }
 ```
