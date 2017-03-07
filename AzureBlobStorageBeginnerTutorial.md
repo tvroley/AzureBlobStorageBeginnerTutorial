@@ -33,9 +33,14 @@
 ```
 ## Perform Basic Azure Blob Storage Actions With C# Code
 
+### Open Program.cs 
+
+* If you don't currently see Program.cs in the middle of your screen in Visual Studio, double click the file called "Program.cs" in the Solution Explorer panel.
+
 ### Add using statements for Azure packages
 
 * After the other using statements at the top of Program.cs, add the following using statements.  The Azure packages downloaded With NuGet before need these namespace declarations.
+
 ```C#
 using Microsoft.Azure;  
 using Microsoft.WindowsAzure.Storage;
@@ -44,7 +49,8 @@ using Microsoft.WindowsAzure.Storage.Blob;
 
 ### Connect to your Azure account using Cloud Configuration Manager
 
-* Add the following code to your Main method.  The Cloud Configuration Manager uses your connection string to access your account.
+* From now on, add the displayed code in this section to your Main method in Program.cs in order.  The Cloud Configuration Manager uses your connection string to access your account.
+
 ```C#
 // logs in to your Azure storage account
 CloudStorageAccount myStorageAccount = CloudStorageAccount.Parse(
@@ -53,7 +59,7 @@ CloudStorageAccount myStorageAccount = CloudStorageAccount.Parse(
 
 ### Initialize a blob client
 
-* The blob client accesses blobs and containers in your Azure blob storage account.  Add this code after the Cloud Configuration Manager code in the Main method.
+* The blob client accesses blobs and containers in your Azure blob storage account.
 
 ```C#
 CloudBlobClient myBlobClient = myStorageAccount.CreateCloudBlobClient();
@@ -61,18 +67,36 @@ CloudBlobClient myBlobClient = myStorageAccount.CreateCloudBlobClient();
 
 ### Access a container in your blob storage by name
 
-* Add this code in the Main method after the code for initializing the blob client.
+* It's okay if the string parameter of the GetContainersReference method is not the name of a container in your Azure storage account yet.
 
 ```C#
 // Access a container in your blob storage by name
 CloudBlobContainer myContainer = blobClient.GetContainerReference("mycontainer");
 ```
 
-> **Note**: It's okay for now if a container with that name does not exist yet.
-
 ### Create a container with the name given to the blob client if it does not exist yet
+
 ```C#
-container.CreateIfNotExists();
+myContainer.CreateIfNotExists();
 ```
 
+### Access a blob in a container by name
 
+* It's okay for now if a blob with that name does not exist yet in the container created in the previous step.
+
+```C#
+// Access a blob in a container by name
+CloudBlockBlob myBlockBlob = container.GetBlockBlobReference("myblockblob");
+```
+
+### Upload a local blob to a cloud container
+
+* When practicing your first time, you can use a text file as a blob.  Create a text file, find its file path, and replace FilePath\FileName in the OpenRead method with the file path and name of your file.  Keep the quotation marks used in the OpenRead parameter. 
+
+```C#
+/*Create or replace a block blob called myblockblob in the container called mycontainer, consisting of the file you chose*/ 
+using (var fileStream = System.IO.File.OpenRead(@"FilePath\FileName"))
+{
+    myBlockBlob.UploadFromStream(fileStream);
+}
+```
