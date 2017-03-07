@@ -37,7 +37,7 @@
 
 * If you don't currently see Program.cs in the middle of your screen in Visual Studio, double click the file called "Program.cs" in the Solution Explorer panel.
 
-### Add using statements for Azure packages
+### Enable your code to utilize Azure Libraries
 
 * After the other using statements at the top of Program.cs, add the following using statements.  The Azure packages downloaded With NuGet before need these namespace declarations.
 
@@ -47,7 +47,7 @@ using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
 ```
 
-### Connect to your Azure account using Cloud Configuration Manager
+### Connect your code to your Azure account
 
 * From now on, add the displayed code in this section to your Main method in Program.cs in order.  The Cloud Configuration Manager uses your connection string to access your account.
 
