@@ -56,8 +56,9 @@ using Microsoft.WindowsAzure.Storage.Blob;
 CloudStorageAccount myStorageAccount = CloudStorageAccount.Parse(
     CloudConfigurationManager.GetSetting("StorageConnectionString"));
 ```
+### Create a container
 
-### Initialize a blob client
+#### Initialize a blob client
 
 * The blob client accesses blobs and containers in your Azure blob storage account.
 
@@ -65,7 +66,7 @@ CloudStorageAccount myStorageAccount = CloudStorageAccount.Parse(
 CloudBlobClient myBlobClient = myStorageAccount.CreateCloudBlobClient();
 ```
 
-### Access a container in your blob storage by name
+#### Access a container in your blob storage by name
 
 * The string parameter of the GetContainersReference method is the name of a container in your Azure storage account, which either already exists, or the next step will create.
 
@@ -74,13 +75,17 @@ CloudBlobClient myBlobClient = myStorageAccount.CreateCloudBlobClient();
 CloudBlobContainer myContainer = blobClient.GetContainerReference("mycontainer");
 ```
 
-### Create a container with the name given to the blob client if it does not exist yet
+#### Create the container if it does not exist
+
+*The Following code creates a container with the name given to the blob client if it does not exists yet.
 
 ```C#
 myContainer.CreateIfNotExists();
 ```
 
-### Access a blob in a container by name
+### Upload Data to a container
+
+#### Access a blob in a container by name
 
 * The string parameter of the GetBlockBlobReference method is the name of a blob in your Azure storage account, which either already exists, or the next step will create.
 
@@ -89,7 +94,7 @@ myContainer.CreateIfNotExists();
 CloudBlockBlob myBlockBlob = container.GetBlockBlobReference("myblockblob");
 ```
 
-### Upload a local blob to a cloud container
+#### Upload a local blob to a cloud container
 
 * When practicing your first time, you can use a text file as a blob.  Create a text file, find its file path, and replace FilePath\FileName in the OpenRead method with the file path and name of your file.  Keep the quotation marks used in the OpenRead method parameter. 
 
