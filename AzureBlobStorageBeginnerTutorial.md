@@ -1,11 +1,11 @@
-# Azure Blob Storage Beginner Tutorial Using C# In Visual Studio
+# Azure Block Blob Storage Beginner Tutorial With C# In Visual Studio
 
 ## Requirements
 
 - Install Visual Studio
 - Begin a Microsoft Azure subscription
 
-## Set Up Visual Studio
+## Set Up Visual Studio For Azure
 
 ### Start A New C# Console Application Project
 
@@ -54,7 +54,33 @@ using Microsoft.WindowsAzure.Storage.Blob;
 
 * Add the following code to your Main method.  The Cloud Configuration Manager uses your connection string to access your account.
 ```C#
+// logs in to your Azure storage account
 CloudStorageAccount myStorageAccount = CloudStorageAccount.Parse(
     CloudConfigurationManager.GetSetting("StorageConnectionString"));
 ```
+
+### Initialize Blob Client
+
+* The blob client accesses blobs and containers in your Azure blob storage account.  Add this code after the Cloud Configuration Manager code in the Main method.
+
+```C#
+CloudBlobClient myBlobClient = myStorageAccount.CreateCloudBlobClient();
+```
+
+### Access A Container In Your Blob Storage By Name
+
+* Add this code in the Main method after the code for initializing the blob client in the Main method.
+
+```C#
+// Access a container in your blob storage by name
+CloudBlobContainer myContainer = blobClient.GetContainerReference("mycontainer");
+```
+
+> **Note**: It's okay for now if a container with that name does not exist yet.
+
+### Create A Container With The Name Given to the Blob Client If It Does Not Exist Yet
+```C#
+container.CreateIfNotExists();
+```
+
 
