@@ -116,4 +116,15 @@ foreach (IListBlobItem item in myContainer.ListBlobs(null, false))
 	CloudBlockBlob myBlob = (CloudBlockBlob)item;
 	Console.WriteLine(myBlob.Uri);
 }
+
+// The following code allows the user to view the blobs before pressing enter
+Console.ReadLine();
+```
+
+### Delete an item in a container
+
+* The following code deletes the block blob in the cloud uploaded earlier.  This occurs after the user presses enter.
+
+```C#
+myBlockBlob.Delete();
 ```
