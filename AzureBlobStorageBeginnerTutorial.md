@@ -24,7 +24,7 @@
 
 > **Warning**: In my experience, installing WindowsAzure.Storage before Microsoft.WindowsAzure.ConfigurationManager caused an error that would not allow me to install Microsoft.WindowsAzure.ConfigurationManager.
 
-
+![NuGet Azure Packages](/AzureBlobStorageBeginnerTutorial/media/NuGetAzurePackages.png)
 
 ### Configure connection string
 
