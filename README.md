@@ -18,7 +18,7 @@
 
 ### Install Azure packages with NuGet
 
-![NuGet Azure Packages](/AzureBlobStorageBeginnerTutorial/media/NuGetAzurePackages.PNG)
+![NuGet Azure Packages](https://github.com/tvroley/AzureBlobStorageBeginnerTutorial/blob/master/images/NuGetAzurePackages.PNG)
 
 1. Right click your project in the solution explorer, and Open the NuGet Package Manager by clicking "Manage NuGet Packages".
 2. Search for "Microsoft.WindowsAzure.ConfigurationManager" in the NuGet Package Manager, and click install.
