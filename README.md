@@ -9,12 +9,12 @@
 
 ### Start a new C# console application project
 
+![Visual Studio New Project C# Console](https://github.com/tvroley/AzureBlobStorageBeginnerTutorial/blob/master/images/VisualStudioNewProjectCSharpConsole.PNG)
+
 1. Open Visual Studio, and click on "New Project".
 2. In the left panel, click "Visual C#".
 3. In the middle panel, click "Console Application".
 4. Click the OK button.
-
-![Visual Studio New Project C# Console](https://github.com/tvroley/AzureBlobStorageBeginnerTutorial/blob/master/images/VisualStudioNewProjectCSharpConsole.PNG)
 
 ### Install Azure packages with NuGet
 
