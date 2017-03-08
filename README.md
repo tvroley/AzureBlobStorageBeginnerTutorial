@@ -125,7 +125,7 @@ foreach (IListBlobItem item in myContainer.ListBlobs(null, false))
 	Console.WriteLine(myBlob.Uri);
 }
 
-// The following code allows the user to view the blobs before pressing enter
+// The following code allows the user to view the blobs in the console before pressing enter
 Console.ReadLine();
 ```
 
