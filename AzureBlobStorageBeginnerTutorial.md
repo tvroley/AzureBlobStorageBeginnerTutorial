@@ -14,9 +14,11 @@
 3. In the middle panel, click "Console Application".
 4. Click the OK button.
 
-	![Visual Studio New Project C# Console](/AzureBlobStorageBeginnerTutorial/media/VisualStudioNewProjectCSharpConsole.png)
+![Visual Studio New Project C# Console](/AzureBlobStorageBeginnerTutorial/media/VisualStudioNewProjectCSharpConsole.PNG)
 
 ### Install Azure packages with NuGet
+
+![NuGet Azure Packages](/AzureBlobStorageBeginnerTutorial/media/NuGetAzurePackages.PNG)
 
 1. Right click your project in the solution explorer, and Open the NuGet Package Manager by clicking "Manage NuGet Packages".
 2. Search for "Microsoft.WindowsAzure.ConfigurationManager" in the NuGet Package Manager, and click install.
@@ -24,11 +26,9 @@
 
 > **Warning**: In my experience, installing WindowsAzure.Storage before Microsoft.WindowsAzure.ConfigurationManager caused an error that would not allow me to install Microsoft.WindowsAzure.ConfigurationManager.
 
-	![NuGet Azure Packages](/AzureBlobStorageBeginnerTutorial/media/NuGetAzurePackages.png)
-
 ### Configure connection string
 
-![Solution Explorer App Config](/AzureBlobStorageBeginnerTutorial/media/SolutionExplorerAppConfig.png)
+![Solution Explorer App Config](/AzureBlobStorageBeginnerTutorial/media/SolutionExplorerAppConfig.PNG)
 
 1. In the Visual Studio Solution Explorer, double click the "App.config" file to open it.
 2. Within the "App.config" file, add the following code after the line that says "</startup>".  Replace "YourAccountName" after "AccountName=" with your Microsoft Azure account name.  Replace "YourKey" after "AccountKey=" with your Microsoft Azure account access key.  The value for the "StorageConnectionString" key is the connection string for your account.
