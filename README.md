@@ -2,8 +2,11 @@
 
 ## Requirements
 
+- Basic C# knowledge
 - Install Visual Studio
-- Begin a Microsoft Azure subscription
+- Begin a Microsoft Azure subscription or free trial
+- Create a resource group in the Azure portal website
+- Create a blob storage account in the Azure portal website
 
 ## Set Up Visual Studio For Azure
 
