@@ -14,7 +14,7 @@
 3. In the middle panel, click "Console Application".
 4. Click the OK button.
 
-![Visual Studio New Project C# Console](https://github.com/tvroley/AzureBlobStorageBeginnerTutorial/media/VisualStudioNewProjectCSharpConsole.png)
+![Visual Studio New Project C# Console](/AzureBlobStorageBeginnerTutorial/media/VisualStudioNewProjectCSharpConsole.png)
 
 ### Install Azure packages with NuGet
 
@@ -23,6 +23,8 @@
 3. Search for "WindowsAzure.Storage" in the NuGet Package Manager, and click install.
 
 > **Warning**: In my experience, installing WindowsAzure.Storage before Microsoft.WindowsAzure.ConfigurationManager caused an error that would not allow me to install Microsoft.WindowsAzure.ConfigurationManager.
+
+
 
 ### Configure connection string
 
