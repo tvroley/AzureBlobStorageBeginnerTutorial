@@ -55,7 +55,9 @@ using Microsoft.WindowsAzure.Storage.Blob;
 
 ### Connect your code to your Azure account
 
-* From now on, add the displayed code in this section to your Main method in Program.cs in order.  The Cloud Configuration Manager uses your connection string to access your account.
+> **From now on, add the displayed code in this section in order to your Main method in Program.cs.**
+
+* The following code logs in to your storage account.  The Cloud Configuration Manager uses the connection string added to the configuration file earlier.
 
 ```C#
 // logs in to your Azure storage account
