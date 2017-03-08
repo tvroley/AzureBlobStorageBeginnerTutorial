@@ -14,7 +14,7 @@
 3. In the middle panel, click "Console Application".
 4. Click the OK button.
 
-![alt text](github.com/tvroley/AzureBlobStorageBeginnerTutorial/blob/master/media/VisualStudioNewProjectConsoleC%23.PNG "Visual Studio New Project C# Console")
+![alt text](https://github.com/tvroley/AzureBlobStorageBeginnerTutorial/media/VisualStudioNewProjectCSharpConsole.PNG "Visual Studio New Project C# Console")
 
 ### Install Azure packages with NuGet
 
