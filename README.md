@@ -28,7 +28,7 @@
 
 ### Configure connection string
 
-![Solution Explorer App Config](/AzureBlobStorageBeginnerTutorial/media/SolutionExplorerAppConfig.PNG)
+![Solution Explorer App Config](https://github.com/tvroley/AzureBlobStorageBeginnerTutorial/blob/master/images/SolutionExplorerAppConfig.PNG)
 
 1. In the Visual Studio Solution Explorer, double click the "App.config" file to open it.
 2. Within the "App.config" file, add the following code after the line that says "</startup>".  Replace "YourAccountName" after "AccountName=" with your Microsoft Azure account name.  Replace "YourKey" after "AccountKey=" with your Microsoft Azure account access key.  The value for the "StorageConnectionString" key is the connection string for your account.
