@@ -128,3 +128,11 @@ Console.ReadLine();
 ```C#
 myBlockBlob.Delete();
 ```
+
+### Delete a container
+
+* The following code deletes the container in the cloud created earlier in the program.  This occurs after the user presses enter.
+
+```C#
+myContainer.Delete();
+```
