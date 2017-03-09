@@ -35,7 +35,7 @@
 ![Solution Explorer App Config](https://github.com/tvroley/AzureBlobStorageBeginnerTutorial/blob/master/images/SolutionExplorerAppConfig.PNG)
 
 1. In the Visual Studio Solution Explorer, double click the "App.config" file to open it.
-2. Within the "App.config" file, add the following code after the line that says "</startup>".  The value for the "StorageConnectionString" key is the connection string for your account.  The connection string allows you to log in to your account using C#.
+2. Within the "App.config" file, after the line that says "</startup>", add the following code sample.  The value matching the "StorageConnectionString" key is the connection string for your storage account.  The connection string allows you to access your storage account using C# in a later step.
 
 ```xml
       <appSettings>
@@ -43,7 +43,7 @@
       </appSettings>
 ```
 
-> Replace "YourAccountName" after "AccountName=" with your Microsoft Azure account name.  Replace "YourKey" after "AccountKey=" with your Microsoft Azure account access key.
+> Replace "YourAccountName" after "AccountName=" with your actual Azure storage account name.  Replace "YourKey" after "AccountKey=" with your actual Azure storage account access key.
 
 ## Perform Basic Azure Blob Storage Actions With C# Code
 
