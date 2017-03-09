@@ -13,28 +13,27 @@
 
 ### Start a new C# console application project
 
-![Visual Studio New Project C# Console](https://github.com/tvroley/AzureBlobStorageBeginnerTutorial/blob/master/images/VisualStudioNewProjectCSharpConsole.PNG)
-
 1. Open Visual Studio, and click on "New Project".
 2. In the left panel, click "Visual C#".
 3. In the middle panel, click "Console Application".
 4. Click the OK button.
 
-### Install Azure packages with NuGet
+	![Visual Studio New Project C# Console](https://github.com/tvroley/AzureBlobStorageBeginnerTutorial/blob/master/images/VisualStudioNewProjectCSharpConsole.PNG)
 
-![NuGet Azure Packages](https://github.com/tvroley/AzureBlobStorageBeginnerTutorial/blob/master/images/NuGetAzurePackages.PNG)
+### Install Azure packages with NuGet
 
 1. Right click your project in the solution explorer, and open the NuGet Package Manager by clicking "Manage NuGet Packages".
 2. Search for "Microsoft.WindowsAzure.ConfigurationManager" in the NuGet Package Manager, and click install.
 3. Search for "WindowsAzure.Storage" in the NuGet Package Manager, and click install.
 
-> **Warning**: In my experience, installing WindowsAzure.Storage in Visual Studio 2015 before Microsoft.WindowsAzure.ConfigurationManager caused an error that would not allow me to install Microsoft.WindowsAzure.ConfigurationManager.
+	![NuGet Azure Packages](https://github.com/tvroley/AzureBlobStorageBeginnerTutorial/blob/master/images/NuGetAzurePackages.PNG)
 
 ### Configure connection string
 
-![Solution Explorer App Config](https://github.com/tvroley/AzureBlobStorageBeginnerTutorial/blob/master/images/SolutionExplorerAppConfig.PNG)
-
 1. In the Visual Studio Solution Explorer, double click the "App.config" file to open it.
+	
+	![Solution Explorer App Config](https://github.com/tvroley/AzureBlobStorageBeginnerTutorial/blob/master/images/SolutionExplorerAppConfig.PNG)
+	
 2. Within the "App.config" file, after the line that says "</startup>", add the following code sample.  The value matching the "StorageConnectionString" key is the connection string for your storage account.  The connection string allows you to access your storage account using C# in a later step.
 
 ```xml
