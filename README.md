@@ -83,7 +83,7 @@ CloudBlobClient myBlobClient = myStorageAccount.CreateCloudBlobClient();
 
 ```C#
 // Access a container in your blob storage by name
-CloudBlobContainer myContainer = blobClient.GetContainerReference("mycontainer");
+CloudBlobContainer myContainer = myBlobClient.GetContainerReference("mycontainer");
 ```
 
 #### Create the container if it does not exist
