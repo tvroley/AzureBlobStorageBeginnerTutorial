@@ -135,16 +135,18 @@ Console.ReadLine();
 
 ### Delete an item in a container
 
-* The following code deletes the block blob in the cloud uploaded earlier.  This occurs after the user presses enter.
+* The following code deletes the block blob in the cloud uploaded earlier.  This occurs after the user presses enter to allow the user to view the results in the Azure portal website as the program runs.
 
 ```C#
+// delete the blob
 myBlockBlob.Delete();
 ```
 
 ### Delete a container
 
-* The following code deletes the container in the cloud created earlier in the program.  This occurs after the user presses enter.
+* The following code deletes the container in the cloud created earlier in the program.  This occurs after the user presses enter to allow the user to view the results in the Azure portal website as the program runs.
 
 ```C#
+// delete the container
 myContainer.Delete();
 ```
