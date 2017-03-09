@@ -156,9 +156,6 @@ Console.ReadLine();
 ```C#
 // delete the container
 myContainer.Delete();
-
-/* The following code allows the user to view changes to their Azure storage account in the Azure portal website before pressing enter */
-Console.ReadLine();
 ```
 
 ## Sample Code
@@ -216,6 +213,10 @@ namespace AzureBlobStorageTutorial
 
             // Delete the blob.
             myBlockBlob.Delete();
+	    
+	    /* The following code allows the user to view changes to their Azure storage account 
+            in the Azure portal website before pressing enter */
+            Console.ReadLine();
 
             // Delete the container
             myContainer.Delete();
