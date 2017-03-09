@@ -153,7 +153,7 @@ myContainer.Delete();
 
 ## Sample Code
 
-> Remember to add a local text file and path to the OpenRead method in line 192 to experience uploading to the cloud 
+> Remember to add a local text file and path to the OpenRead method in line 34 to experience uploading to the cloud 
 
 ```C#
 using System;
