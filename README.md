@@ -61,9 +61,9 @@ using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
 ```
 
-### Connect your code to your Azure account
+### Create a connection to your Azure storage account
 
-> **From now on, add the displayed code in this section in order to your Main method in Program.cs.**
+> **From now on, add the code samples in this section in order to your Main method in Program.cs.**
 
 * The following code logs in to your storage account.  The Cloud Configuration Manager uses the connection string added to the configuration file earlier.
 
@@ -74,7 +74,7 @@ CloudStorageAccount myStorageAccount = CloudStorageAccount.Parse(
 ```
 ### Create a container
 
-#### Initialize a blob client
+#### Create a blob client
 
 * The blob client accesses blobs and containers in your Azure blob storage account.
 
@@ -112,11 +112,11 @@ CloudBlockBlob myBlockBlob = myContainer.GetBlockBlobReference("myblockblob");
 
 #### Upload a local blob to a cloud container
 
-* When practicing your first time, you can use a text file as a blob.  Create a text file, find its file path, and replace FilePath\FileName in the OpenRead method with the file path and name of your file.  Keep the quotation marks used in the OpenRead method parameter. 
+* When practicing your first time, you can use a text file as a blob.  Create a text file, find its file path, and replace "FilePath\FileName.txt" in the OpenRead method with the file path and name of your text file.  Keep the quotation marks used in the OpenRead method parameter, and remember the file extension. 
 
 ```C#
 // Create a block blob 
-using (var fileStream = System.IO.File.OpenRead(@"FilePath\FileName"))
+using (var fileStream = System.IO.File.OpenRead(@"FilePath\FileName.txt"))
 {
     myBlockBlob.UploadFromStream(fileStream);
 }
@@ -124,7 +124,7 @@ using (var fileStream = System.IO.File.OpenRead(@"FilePath\FileName"))
 
 ### View items in a container
 
-* The following code lists the block blobs in a container by their URI in the console, and then waits for the user to press enter to continue.
+* The following code lists all the block blobs in a container by their URI in the console, and then waits for the user to press enter to continue.
 
 ```C#
 // List blobs in a container by URI for the user 
@@ -140,22 +140,22 @@ Console.ReadLine();
 
 ### Delete an item in a container
 
-* The following code deletes the block blob in the cloud uploaded earlier.  This occurs after the user presses enter to allow the user to view the contents of their storage account changing in the Azure portal website as the program runs.
+* The following code deletes the block blob in the cloud uploaded earlier in the program.  This occurs after the user presses enter once, which allows the user to view the contents of their storage account on the Azure portal website before and after the statement executes.
 
 ```C#
-// delete the blob
+// Deletes the blob
 myBlockBlob.Delete();
 
-/* The following code allows the user to view changes to their Azure storage account in the Azure portal website before pressing enter */
+// Allows the user to view changes to their Azure storage account in the Azure portal website before pressing enter
 Console.ReadLine();
 ```
 
 ### Delete a container
 
-* The following code deletes the container in the cloud created earlier in the program.  This occurs after the user presses enter to allow the user to view the contents of their storage account changing in the Azure portal website as the program runs.
+* The following code deletes the container in the cloud created earlier in the program.  This occurs after the user presses enter a second time to allow the user to view the contents of their storage account in the Azure portal website before and after the statement executes.
 
 ```C#
-// delete the container
+// Deletes the container
 myContainer.Delete();
 ```
 
@@ -209,14 +209,13 @@ namespace AzureBlobStorageTutorial
                 Console.WriteLine(myBlob.Uri);
             }
 
-            // The following code allows the user to view the blobs in the console before pressing enter
+            // Allows the user to view the blobs in the console before pressing enter
             Console.ReadLine();
 
             // Delete the blob.
             myBlockBlob.Delete();
 	    
-	    /* The following code allows the user to view changes to their Azure storage account 
-            in the Azure portal website before pressing enter */
+	    // Allows the user to view changes to their Azure storage account in their Azure portal before pressing enter
             Console.ReadLine();
 
             // Delete the container
