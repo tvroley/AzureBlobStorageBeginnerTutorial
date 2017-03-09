@@ -37,9 +37,9 @@
 2. Within the "App.config" file, after the line that says "</startup>", add the following code sample.  The value matching the "StorageConnectionString" key is the connection string for your storage account.  The connection string allows you to access your storage account using C# in a later step.
 
 ```xml
-      <appSettings>
-        <add key="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=YourAccountName;AccountKey=YourKey" />
-      </appSettings>
+<appSettings>
+  <add key="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=YourAccountName;AccountKey=YourKey" />
+</appSettings>
 ```
 
 > Replace "YourAccountName" after "AccountName=" with your actual Azure storage account name.  Replace "YourKey" after "AccountKey=" with your actual Azure storage account access key.
