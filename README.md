@@ -110,7 +110,7 @@ CloudBlockBlob myBlockBlob = myContainer.GetBlockBlobReference("myblockblob");
 * When practicing your first time, you can use a text file as a blob.  Create a text file, find its file path, and replace FilePath\FileName in the OpenRead method with the file path and name of your file.  Keep the quotation marks used in the OpenRead method parameter. 
 
 ```C#
-/*Create or replace a block blob called myblockblob in the container called mycontainer, consisting of the file you chose*/ 
+// Create a block blob 
 using (var fileStream = System.IO.File.OpenRead(@"FilePath\FileName"))
 {
     myBlockBlob.UploadFromStream(fileStream);
