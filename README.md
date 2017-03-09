@@ -5,6 +5,7 @@
 - Basic C# knowledge
 - Install Visual Studio
 - Begin a Microsoft Azure subscription or [free trial](https://azure.microsoft.com/en-us/free/)
+- Basic familiarity with navigating Azure portal website
 - Create a resource group in the Azure portal website
 - Create a blob storage account in the Azure portal website
 
