@@ -122,10 +122,11 @@ using (var fileStream = System.IO.File.OpenRead(@"FilePath\FileName"))
 * The following code lists the block blobs in a container by their URI.
 
 ```C#
-foreach (IListBlobItem item in myContainer.ListBlobs(null, false))
+// List blobs in a container by URI for the user 
+foreach (IListBlobItem i in myContainer.ListBlobs(null, false))
 {
-	CloudBlockBlob myBlob = (CloudBlockBlob)item;
-	Console.WriteLine(myBlob.Uri);
+	CloudBlockBlob myBlob = (CloudBlockBlob)i;
+        Console.WriteLine(myBlob.Uri);
 }
 
 // The following code allows the user to view the blobs in the console before pressing enter
