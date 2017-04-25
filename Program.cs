@@ -42,8 +42,8 @@ namespace AzureBlobStorageTutorial
                 CloudBlockBlob myBlob = (CloudBlockBlob)i;
                 Console.WriteLine(myBlob.Uri);
             }
-			
-			Console.WriteLine("Press enter to delete blob");
+	
+	    Console.WriteLine("Press enter to delete blob");
 
             /* Allows the user to view the blobs in the console or Azure portal before pressing enter */
             Console.ReadLine();
@@ -51,7 +51,7 @@ namespace AzureBlobStorageTutorial
             // Delete the blob.
             myBlockBlob.Delete();
 			
-			Console.WriteLine("Blob deleted");
+	    Console.WriteLine("Blob deleted");
             Console.WriteLine("Press enter to delete container");
             
             /* Allows the user to view changes to their Azure storage account 
@@ -61,7 +61,7 @@ namespace AzureBlobStorageTutorial
             // Delete the container
             myContainer.Delete();
 			
-			Console.WriteLine("Container deleted");
+	    Console.WriteLine("Container deleted");
             Console.WriteLine("Press enter to exit");
             Console.ReadLine();
         }
